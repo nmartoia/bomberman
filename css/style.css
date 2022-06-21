@@ -35,3 +35,9 @@ img,.perso1{
 .incassable{
     background: grey;
 }
+button{
+    width: 100px;
+    height: 100px;
+    font-size: 24px;
+    display: none;
+}

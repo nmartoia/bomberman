@@ -4,6 +4,9 @@ let axeX=0
 let axeY=0
 let axeX1=8
 let axeY1=4
+const btn=document.querySelector('button')
+const spawn1=document.querySelector('#spawn1')
+const spawn2=document.querySelector('#spawn2')
 const perso=document.createElement('img')
 perso.src='img/perso1.png'
 perso.alt='perso1'
@@ -12,6 +15,8 @@ const perso2=document.createElement('img')
 perso2.src='img/perso2.png'
 perso2.alt='perso2'
 perso2.className='perso2'
+spawn1.appendChild(perso)
+spawn2.appendChild(perso2)
 console.log(block[axeY+1].children[axeX].classList.contains('vide'))
 window.addEventListener('keydown',(e)=>{
     if(e.code=='KeyS'){
@@ -106,6 +111,47 @@ function bombe(persob){
         if(axeBX<block[axeBY].children.length-1&&block[axeBY].children[axeBX+1].className=='cassable'){
             block[axeBY].children[axeBX+1].className='vide'
         }
+        if(axeBY<block.length-1&&block[axeBY+1].children[axeBX].firstChild==perso2){
+            perso2.remove()
+            alert('joueur1 a gagner')
+        }
+        if(axeBY>0&&block[axeBY-1].children[axeBX].firstChild==perso2){
+            perso2.remove()
+            alert('joueur1 a gagner')
+        }
+        if(axeBX>0&&block[axeBY].children[axeBX-1].firstChild==perso2){
+            perso2.remove()
+            alert('joueur1 a gagner')
+        }
+        if(axeBX<block[axeBY].children.length-1&&block[axeBY].children[axeBX+1].firstChild==perso2){
+            perso2.remove()
+            alert('joueur1 a gagner')
+        }
+        if(axeBY<block.length-1&&block[axeBY+1].children[axeBX].firstChild==perso){
+            perso.remove()
+            alert('joueur2 a gagner')
+        }
+        if(axeBY>0&&block[axeBY-1].children[axeBX].firstChild==perso){
+            perso.remove()
+            alert('joueur2 a gagner')
+        }
+        if(axeBX>0&&block[axeBY].children[axeBX-1].firstChild==perso){
+            perso.remove()
+            alert('joueur2 a gagner')
+        }
+        if(block[axeBY].children[axeBX].firstChild==perso2){
+            perso2.remove()
+            alert('joueur1 a gagner')
+            btn.style.display='block'
+        }
+        if(block[axeBY].children[axeBX].firstChild==perso){
+            perso.remove()
+            alert('joueur2 a gagner')
+            btn.style.display='block'
+        }
         bombe.remove()
     },1000)
 }
+btn.addEventListener('click',()=>{
+    location.reload()
+})
