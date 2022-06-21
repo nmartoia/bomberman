@@ -1,0 +1,36 @@
+div{
+    width: 100px;
+    height: 100px;
+}
+#plateau{
+    display: flex;
+    width: 900px;
+    height: 500px;
+    flex-wrap: wrap;
+}
+.y{
+    width: 900px;
+    height: 100px;
+    display: flex;
+}
+img{
+    width: 84px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+}
+#perso2{
+    width: 100px;
+}
+.spawn{
+    background: green;
+}
+.vide{
+    background: blue;
+}
+.cassable{
+    background: brown;
+}
+.incassable{
+    background: grey;
+}
