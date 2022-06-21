@@ -75,7 +75,7 @@ window.addEventListener('keydown',(e)=>{
             block[axeY1].children[axeX1].appendChild(perso2)
         }
     }
-    else if(e.code=='Space'){
+    else if(e.code=='KeyE'||e.code=='Space'){
         bombe(perso)
     }
     else if(e.code=='Numpad0'){
@@ -99,6 +99,12 @@ function bombe(persob){
         }
         block[axeBY].children[axeBX].appendChild(bombe)
         setTimeout(function(){
+            if(block[axeBY].children[axeBX].firstChild==perso2){
+                joueur1win()
+            }
+            if(block[axeBY].children[axeBX].firstChild==perso){
+                joueur2win()
+            }
             if(axeBY<block.length-1&&block[axeBY+1].children[axeBX].className=='cassable'){
                 block[axeBY+1].children[axeBX].className='vide'
             }
@@ -132,10 +138,7 @@ function bombe(persob){
             if(axeBX>0&&block[axeBY].children[axeBX-1].firstChild==perso){
                 joueur2win()
             }
-            if(block[axeBY].children[axeBX].firstChild==perso2){
-                joueur1win()
-            }
-            if(block[axeBY].children[axeBX].firstChild==perso){
+            if(axeBX<block[axeBY].children.length-1&&block[axeBY].children[axeBX+1].firstChild==perso){
                 joueur2win()
             }
             bombe.remove() 
@@ -144,16 +147,21 @@ function bombe(persob){
     }
 }
 function joueur1win(){
-    perso2.remove()
-    alert('joueur1 a gagner')
-    btn.style.display='block'
-    win=true
+    if(win==false){
+        perso2.src='img/death.png'
+        perso2.classList.remove('perso2')
+        alert('joueur1 a gagner')
+        btn.style.display='block'
+        win=true
+    }
 }
 function joueur2win(){
-    perso.remove()
-    alert('joueur2 a gagner')
-    btn.style.display='block'
-    win=true
+    if(win==false){
+        perso.src='img/death.png'
+        alert('joueur2 a gagner')
+        btn.style.display='block'
+        win=true
+    }
 }
 btn.addEventListener('click',()=>{
     location.reload()

@@ -14,11 +14,13 @@ div{
     height: 100px;
     display: flex;
 }
-.perso2,.perso1{
-    z-index: 2;
-}
 .perso2{
     width: 100px;
+}
+.bombe{
+    position: absolute;
+    top: 0px;
+    left: 13px;
 }
 img,.perso1{
     width: 84px;
@@ -28,6 +30,7 @@ img,.perso1{
 }
 .vide{
     background: blue;
+    position: relative;
 }
 .cassable{
     background: brown;
