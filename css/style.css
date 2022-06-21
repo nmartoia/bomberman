@@ -7,23 +7,24 @@ div{
     width: 900px;
     height: 500px;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 .y{
     width: 900px;
     height: 100px;
     display: flex;
 }
-img{
+.perso2,.perso1{
+    z-index: 2;
+}
+.perso2{
+    width: 100px;
+}
+img,.perso1{
     width: 84px;
     height: 100px;
     margin: 0 auto;
     display: block;
-}
-#perso2{
-    width: 100px;
-}
-.spawn{
-    background: green;
 }
 .vide{
     background: blue;
