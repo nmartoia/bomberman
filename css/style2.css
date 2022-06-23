@@ -4,8 +4,8 @@ div{
 }
 #plateau{
     display: flex;
-    width: 900px;
-    height: 500px;
+    width: 1100px;
+    height: 700px;
     flex-wrap: wrap;
     margin: 0 auto;
 }
@@ -17,11 +17,6 @@ div{
     margin: 0 auto;
 }
 .y{
-    width: 900px;
-    height: 100px;
-    display: flex;
-}
-.y2{
     width: 1100px;
     height: 100px;
     display: flex;
