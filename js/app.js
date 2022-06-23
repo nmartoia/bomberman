@@ -9,11 +9,11 @@ const btn=document.querySelector('button')
 const spawn1=document.querySelector('#spawn1')
 const spawn2=document.querySelector('#spawn2')
 const perso=document.createElement('img')
-perso.src='img/perso1.png'
+perso.src='img/persomove.gif'
 perso.alt='perso1'
 perso.className='perso1'
 const perso2=document.createElement('img')
-perso2.src='img/perso2.png'
+perso2.src='img/perso2move.gif'
 perso2.alt='perso2'
 perso2.className='perso2'
 spawn1.appendChild(perso)
@@ -148,7 +148,7 @@ function bombe(persob){
 }
 function joueur1win(){
     if(win==false){
-        perso2.src='img/death.png'
+        perso2.src='img/deathmove.gif'
         perso2.classList.remove('perso2')
         alert('joueur1 a gagner')
         btn.style.display='block'
@@ -157,7 +157,7 @@ function joueur1win(){
 }
 function joueur2win(){
     if(win==false){
-        perso.src='img/death.png'
+        perso.src='img/deathmove.gif'
         alert('joueur2 a gagner')
         btn.style.display='block'
         win=true

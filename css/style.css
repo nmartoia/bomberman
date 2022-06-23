@@ -26,19 +26,10 @@ div{
     height: 100px;
     display: flex;
 }
-.perso2{
-    width: 100px;
-}
 .bombe{
     position: absolute;
     top: 0px;
     left: 13px;
-}
-img,.perso1{
-    width: 84px;
-    height: 100px;
-    margin: 0 auto;
-    display: block;
 }
 .vide{
     background: blue;
@@ -55,4 +46,8 @@ button{
     height: 100px;
     font-size: 24px;
     display: none;
+}
+img{
+    width: 100px;
+    height: 100px;
 }
