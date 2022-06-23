@@ -2,6 +2,28 @@ div{
     width: 100px;
     height: 100px;
 }
+a{
+    margin: 0 auto;
+}
+.selectmap{
+    width: 500px;
+    margin: 0 auto;
+}
+body{
+    display: flex;
+}
+#controle{
+    width: auto;
+    height: auto;
+}
+ul{
+    padding: 10px;
+}
+.map{
+    display: inline-block;
+    width: 500px;
+    height: 250px;
+}
 #plateau{
     display: flex;
     width: 900px;
