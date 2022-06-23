@@ -27,9 +27,18 @@ div{
     display: flex;
 }
 .bombe{
+    width: 84px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
     position: absolute;
     top: 0px;
     left: 13px;
+}
+img{
+    width: 100px;
+    height: 100px;
+    display: block;
 }
 .vide{
     background: blue;
@@ -46,8 +55,4 @@ button{
     height: 100px;
     font-size: 24px;
     display: none;
-}
-img{
-    width: 100px;
-    height: 100px;
 }
