@@ -78,3 +78,7 @@ button{
     font-size: 24px;
     display: none;
 }
+video{
+    width: 0;
+    height: 0;
+}

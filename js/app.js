@@ -5,6 +5,7 @@ let axeY=0
 let axeX1=block[block.length-1].children.length-1
 let axeY1=block.length-1
 let win = false
+const video = document.querySelector('video')
 const btn=document.querySelector('button')
 const spawn1=document.querySelector('#spawn1')
 const spawn2=document.querySelector('#spawn2')
@@ -19,6 +20,7 @@ perso2.className='perso2'
 spawn1.appendChild(perso)
 spawn2.appendChild(perso2)
 window.addEventListener('keydown',(e)=>{
+    video.muted=false
     if(e.code=='KeyS'){
         if(axeY<block.length-1&&block[axeY+1].children[axeX].firstChild==null&&block[axeY+1].children[axeX].classList.contains('vide')&&win==false){
             block[axeY].children[axeX].removeChild(block[axeY].children[axeX].firstChild)
