@@ -25,6 +25,9 @@ ul{
     width: 500px;
     height: 250px;
 }
+.map4{
+    height: 450px;
+}
 #plateau{
     display: flex;
     width: 900px;
@@ -46,6 +49,17 @@ ul{
     flex-wrap: wrap;
     margin: 0 auto;
 }
+#plateau3{
+    display: flex;
+    width: 700px;
+    height: 1100px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.btn{
+    width: 200px;
+    height: 200px;
+}
 .y{
     width: 900px;
     height: 100px;
@@ -53,6 +67,11 @@ ul{
 }
 .y2{
     width: 1100px;
+    height: 100px;
+    display: flex;
+}
+.y3{
+    width: 700px;
     height: 100px;
     display: flex;
 }
@@ -81,9 +100,9 @@ img{
     background: grey;
 }
 button{
-    width: 100px;
-    height: 100px;
-    font-size: 24px;
+    width: 200px;
+    height: 200px;
+    font-size: 28px;
     display: none;
 }
 video{

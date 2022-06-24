@@ -20,6 +20,7 @@ perso2.alt='perso2'
 perso2.className='perso2'
 spawn1.appendChild(perso)
 spawn2.appendChild(perso2)
+document.body.style.zoom = "86%";
 window.addEventListener('keydown',(e)=>{
     video.muted=false
     if(e.code=='KeyS'){
