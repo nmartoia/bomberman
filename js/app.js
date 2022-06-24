@@ -7,6 +7,7 @@ let axeY1=block.length-1
 let win = false
 const video = document.querySelector('video')
 const btn=document.querySelector('button')
+const btn2=document.querySelectorAll('button')[1]
 const spawn1=document.querySelector('#spawn1')
 const spawn2=document.querySelector('#spawn2')
 const perso=document.createElement('img')
@@ -154,6 +155,7 @@ function joueur1win(){
         perso2.classList.remove('perso2')
         alert('joueur1 a gagner')
         btn.style.display='block'
+        btn2.style.display='block'
         win=true
     }
 }
@@ -162,6 +164,7 @@ function joueur2win(){
         perso.src='img/deathmove.gif'
         alert('joueur2 a gagner')
         btn.style.display='block'
+        btn2.style.display='block'
         win=true
     }
 }
