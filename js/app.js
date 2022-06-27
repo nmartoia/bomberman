@@ -103,23 +103,39 @@ function bombe(persob){
         }
         block[axeBY].children[axeBX].appendChild(bombe)
         setTimeout(function(){
+            block[axeBY].children[axeBX].className='explosion'
+                setTimeout(function(){
+                    block[axeBY].children[axeBX].className='vide'
+                },500)
             if(block[axeBY].children[axeBX].firstChild==perso2){
                 joueur1win()
             }
             if(block[axeBY].children[axeBX].firstChild==perso){
                 joueur2win()
             }
-            if(axeBY<block.length-1&&block[axeBY+1].children[axeBX].className=='cassable'){
-                block[axeBY+1].children[axeBX].className='vide'
+            if(axeBY<block.length-1&&(block[axeBY+1].children[axeBX].className=='cassable'||block[axeBY+1].children[axeBX].className=='vide')){
+                block[axeBY+1].children[axeBX].className='explosion'
+                setTimeout(function(){
+                    block[axeBY+1].children[axeBX].className='vide'
+                },500)
             }
-            if(axeBY>0&&block[axeBY-1].children[axeBX].className=='cassable'){
-                block[axeBY-1].children[axeBX].className='vide'
+            if(axeBY>0&&(block[axeBY-1].children[axeBX].className=='cassable'||block[axeBY-1].children[axeBX].className=='vide')){
+                block[axeBY-1].children[axeBX].className='explosion'
+                setTimeout(function(){
+                    block[axeBY-1].children[axeBX].className='vide'
+                },500)
             }
-            if(axeBX>0&&block[axeBY].children[axeBX-1].className=='cassable'){
-                block[axeBY].children[axeBX-1].className='vide'
+            if(axeBX>0&&(block[axeBY].children[axeBX-1].className=='cassable'||block[axeBY].children[axeBX-1].className=='vide')){
+                block[axeBY].children[axeBX-1].className='explosion'
+                setTimeout(function(){
+                    block[axeBY].children[axeBX-1].className='vide'
+                },500)
             }
-            if(axeBX<block[axeBY].children.length-1&&block[axeBY].children[axeBX+1].className=='cassable'){
-                block[axeBY].children[axeBX+1].className='vide'
+            if(axeBX<block[axeBY].children.length-1&&(block[axeBY].children[axeBX+1].className=='cassable'||block[axeBY].children[axeBX+1].className=='vide')){
+                block[axeBY].children[axeBX+1].className='explosion'
+                setTimeout(function(){
+                    block[axeBY].children[axeBX+1].className='vide'
+                },500)
             }
             if(axeBY<block.length-1&&block[axeBY+1].children[axeBX].firstChild==perso2){
                 joueur1win()
