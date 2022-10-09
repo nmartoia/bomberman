@@ -106,10 +106,6 @@ button{
     font-size: 28px;
     display: none;
 }
-video{
-    width: 0;
-    height: 0;
-}
 .explosion{
     background: yellow;
 }
