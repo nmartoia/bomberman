@@ -11,11 +11,45 @@ const btn2=document.querySelectorAll('button')[1];
 const spawn1=document.querySelector('#spawn1');
 const spawn2=document.querySelector('#spawn2');
 const perso=document.createElement('img');
-perso.src='img/persomove.gif';
+const perso2=document.createElement('img');
+const pers1=document.querySelector('.pers1');
+const pers2=document.querySelector('.pers2');
+if(localStorage.getItem('skinj1')){
+    perso.src='img/perso' + localStorage.getItem('skinj1') + '.gif';
+    pers1.src='img/perso' + localStorage.getItem('skinj1') + '.gif'
+}else{
+    localStorage.setItem('skinj1',1);
+    perso.src='img/perso1.gif';
+    pers1.src='img/perso1.gif';
+}
+if(localStorage.getItem('skinj2')){
+    perso2.src='img/perso' + localStorage.getItem('skinj2') + '.gif';
+    pers2.src='img/perso' + localStorage.getItem('skinj2') + '.gif';
+}else{
+    localStorage.setItem('skinj2',2);
+    perso2.src='img/perso2.gif';
+    pers2.src='img/perso2.gif';
+}
+const btnc1 = document.querySelector('#btnc1');
+const btnc2 = document.querySelector('#btnc2');
+btnc1.addEventListener('click',()=>{
+    const iperso = prompt('dite un nombre de 1 a 16');
+    if(iperso>0&&iperso<17){
+        localStorage.setItem('skinj1',parseInt(iperso));
+        perso.src='img/perso' + iperso + '.gif';
+        pers1.src='img/perso' + iperso + '.gif'
+    }
+});
+btnc2.addEventListener('click',()=>{
+    const iperso2 = prompt('dite un autre nombre de 1 a 16');
+    if(iperso2>0&&iperso2<17){
+        localStorage.setItem('skinj2',parseInt(iperso2));
+        perso2.src='img/perso' + iperso2 + '.gif';
+        pers2.src='img/perso' + iperso2 + '.gif'
+    }
+});
 perso.alt='perso1';
 perso.className='perso1';
-const perso2=document.createElement('img');
-perso2.src='img/perso2move.gif';
 perso2.alt='perso2';
 perso2.className='perso2';
 spawn1.appendChild(perso);

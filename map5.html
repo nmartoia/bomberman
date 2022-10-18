@@ -9,123 +9,128 @@
     <link rel="icon" href="img/bombe.png">
 </head>
 <body>
-    <div id="controle">
-        <img src="img/persomove.gif" alt="isaac">
-        <p>controle</p>
-        <ul>
-            <li>Z = haut</li>
-            <li>S = bas</li>
-            <li>Q = gauche</li>
-            <li>D = droite</li>
-            <li>E/SPACE = poser une bombe</li>
-        </ul>
-        <img src="img/perso2move.gif" alt="azazel">
-        <p>controle</p>
-        <ul>
-            <li>flech haut = haut</li>
-            <li>flech bas = bas</li>
-            <li>flech gauche = gauche</li>
-            <li>flech droite = droite</li>
-            <li>0 paver numerique = poser une bombe</li>
-        </ul>
+    <div id="body">
+        <div id="controle">
+            <img src="img/perso1.gif" class="pers1" alt="isaac">
+            <p>controle</p>
+            <ul>
+                <li>Z = haut</li>
+                <li>S = bas</li>
+                <li>Q = gauche</li>
+                <li>D = droite</li>
+                <li>E/SPACE = poser une bombe</li>
+            </ul>
+            <img src="img/perso2.gif" class="pers2" alt="azazel">
+            <p>controle</p>
+            <ul>
+                <li>flech haut = haut</li>
+                <li>flech bas = bas</li>
+                <li>flech gauche = gauche</li>
+                <li>flech droite = droite</li>
+                <li>0 paver numerique = poser une bombe</li>
+            </ul>
+        </div>
+        <div id="plateau1">
+            <div class="y y2">
+                <div class="vide" id="spawn1"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+            </div>
+            <div class="y y2">
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+            </div>
+            <div class="y y2">
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+            </div>
+            <div class="y y2">
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+            </div>
+            <div class="y y2">
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+            </div>
+            <div class="y y2">
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+            </div>
+            <div class="y y2">
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide"></div>
+                <div class="vide" id="spawn2"></div>
+            </div>
+        </div>
+        <div class="btn">
+            <button>restart</button>
+            <button onclick="window.location.href = 'index.html';">changer de carte</button>
+        </div>
     </div>
-    <div id="plateau1">
-        <div class="y y2">
-            <div class="vide" id="spawn1"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-        </div>
-        <div class="y y2">
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-        </div>
-        <div class="y y2">
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-        </div>
-        <div class="y y2">
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-        </div>
-        <div class="y y2">
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-        </div>
-        <div class="y y2">
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-        </div>
-        <div class="y y2">
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide"></div>
-            <div class="vide" id="spawn2"></div>
-        </div>
-    </div>
-    </div>
-    <div class="btn">
-        <button>restart</button>
-        <button onclick="window.location.href = 'index.html';">changer de carte</button>
+    <div id="flex">
+        <button id='btnc1'>changer le skin du joueur 1</button>
+        <button id='btnc2'>changer le skin du joueur 2</button>
     </div>
     <script src="js/app.js"></script>
 </body>
