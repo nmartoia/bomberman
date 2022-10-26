@@ -127,3 +127,8 @@ button{
 .explosion{
     background: yellow;
 }
+
+
+.body {
+    overflow: hidden;
+}
