@@ -55,16 +55,8 @@ perso2.className='perso2';
 spawn1.appendChild(perso);
 spawn2.appendChild(perso2);
 document.body.style.zoom = "86%";
-let audio=document.createElement('audio');
-let first=true;
 window.addEventListener('mousedown',onmousedown);
 window.addEventListener('keydown', onmousedown);
-function onmousedown(){
-	if(!first) return;
-	first=false;
-	audio.src="./audio/music.mp3";
-	audio.play();
-}
 window.addEventListener('keydown',(e)=>{
     if(e.code=='KeyS'){
         if(axeY<block.length-1&&block[axeY+1].children[axeX].firstChild==null&&block[axeY+1].children[axeX].classList.contains('vide')&&win==false){
